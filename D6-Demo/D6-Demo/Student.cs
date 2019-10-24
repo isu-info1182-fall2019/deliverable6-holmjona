@@ -8,11 +8,16 @@ namespace D6_Demo {
     class Student : Person , ISayTeacher {
         private int _StudentID;
 
+        //private -- Only visible to the class
+            //public -- Visible everywhere
+            //protected -- visible only to derived classes
+            
+
         public int StudentID {
-            get {
+           get {
                 return _StudentID;
             }
-            set {
+           set {
                 if (value > 0) {
                     _StudentID = value;
                 }
@@ -29,6 +34,7 @@ namespace D6_Demo {
 
         public string SayTeacher()
         {
+           // this.StudentID;
             return "Moo";
         }
 

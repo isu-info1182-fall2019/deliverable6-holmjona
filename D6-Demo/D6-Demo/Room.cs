@@ -9,7 +9,7 @@ namespace D6_Demo {
     {
         private int _Number;
         private Teacher _Teacher;
-        private Student[,] _Students;
+        private List<Student> _Students;
 
         public int Number {
             get { return _Number; }
@@ -25,7 +25,7 @@ namespace D6_Demo {
             }
         }
 
-        public Student[,] Students {
+        public List<Student> Students {
             get {
                 if(_Students == null) {
                     fillStudents();
@@ -38,9 +38,12 @@ namespace D6_Demo {
         }
 
         private void fillStudents() {
-            _Students = new Student[4, 5];
-            
-
+            _Students = new List<Student>();
+            _Students.Add(new Student() { FirstName = "Bill" });
+            _Students.Add(new Student() { FirstName = "Sally" });
+            _Students.Add(new Student() { FirstName = "Meshari" });
+            _Students.Add(new Student() { FirstName = "Sushan" });
+            _Students.Add(new Student() { FirstName = "Frank" });
 
         }
 

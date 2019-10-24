@@ -55,9 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="frmSecond.xaml.cs">
+      <DependentUpon>frmSecond.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Room.cs" />
+    <Compile Include="School.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Teacher.cs" />
+    <Page Include="frmSecond.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
