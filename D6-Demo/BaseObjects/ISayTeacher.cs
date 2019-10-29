@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace D6_Demo
-{
-    interface ISayTeacher
+namespace BaseObjects {
+    public interface ISayTeacher
     {
          string SayTeacher();
     }

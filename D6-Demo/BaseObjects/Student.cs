@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace D6_Demo {
-    class Student : Person , ISayTeacher {
+namespace BaseObjects {
+    public class Student : Person , ISayTeacher {
         private int _StudentID;
 
         //private -- Only visible to the class

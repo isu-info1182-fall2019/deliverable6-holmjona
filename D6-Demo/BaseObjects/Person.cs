@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace D6_Demo {
+namespace BaseObjects {
     /// <summary>
     /// Jon Holmes
     /// INFO 1182
@@ -12,7 +12,7 @@ namespace D6_Demo {
     /// Prof. Holmes
     /// Description: This is a person that can exist
     /// </summary>
-    abstract class  Person {
+   public abstract class  Person {
         #region Private Variables / Attributes / Class-Level Variables / Fields
         private string _FirstName = "";
         private string _MiddleName = "";

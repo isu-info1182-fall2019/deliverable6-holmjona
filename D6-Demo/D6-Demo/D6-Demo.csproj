@@ -58,10 +58,6 @@
     <Compile Include="frmSecond.xaml.cs">
       <DependentUpon>frmSecond.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Room.cs" />
-    <Compile Include="School.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="Teacher.cs" />
     <Page Include="frmSecond.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -74,14 +70,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ISayTeacher.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -106,6 +100,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseObjects\BaseObjects.csproj">
+      <Project>{48b593ef-b48a-4b72-a685-f76f071be792}</Project>
+      <Name>BaseObjects</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

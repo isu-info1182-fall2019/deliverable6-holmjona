@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace D6_Demo {
-    class Teacher : Person {
+namespace BaseObjects {
+   public class Teacher : Person {
         private Room _Room;
 
         public Room Room {

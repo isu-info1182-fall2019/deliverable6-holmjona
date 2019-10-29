@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace D6_Demo {
-  static class School {
+namespace BaseObjects {
+  public static class School {
         private static int _Number;
             
         public static int Number {

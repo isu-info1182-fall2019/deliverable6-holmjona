@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace D6_Demo {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+        BaseObjects.
             Room r = new Room();
         public MainWindow() {
             InitializeComponent();
@@ -41,7 +43,6 @@ namespace D6_Demo {
             lstString.Add("1");
             lstString.Add("Two");
             //lstString.Add(3.ToString());
-
             List<Person> lstPeople = new List<Person>();
             lstPeople.Add(new Student());
             lstPeople.Add(new Student());
@@ -81,7 +82,9 @@ namespace D6_Demo {
             Dictionary<Teacher, List<Student>> myClass = new Dictionary<Teacher, List<Student>>();
 
             Button btn = new Button();
-
+            ISayTeacher ist = new Student();
+            Student a = new Student();
+            a.SayTeacher();
 
             r.Students.Add(new Student() { FirstName = "Mary" });
 
@@ -93,6 +96,26 @@ namespace D6_Demo {
             foreach(Student s in studFound) {
                 tbOut.Text += s.FirstName;
             }
+
+            Teacher mrSmith = new Teacher();
+            Student litleJohnny = new Student();
+
+            Desk<Teacher> teachersDesk = new Desk<Teacher>();
+            teachersDesk.Sitter = mrSmith;
+            //teachersDesk.Sitter = litleJohnny;
+
+
+            Desk<Person> openDesk = new Desk<Person>();
+            openDesk.Sitter = mrSmith;
+            openDesk.Sitter = litleJohnny;
+
+            Desk<int> calc = new Desk<int>();
+           // calc.Sitter = mrSmith;
+            calc.Sitter = 2645;
+            
+
+
+
 
         }
 
