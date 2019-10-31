@@ -40,6 +40,7 @@ namespace D6_Demo {
             double avg = ints.Average();
 
 
+
         }
 
         private void btnChangeStatic_Click(object sender, RoutedEventArgs e) {

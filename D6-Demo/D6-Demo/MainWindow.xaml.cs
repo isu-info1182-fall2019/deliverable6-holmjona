@@ -88,14 +88,17 @@ namespace D6_Demo {
 
             r.Students.Add(new Student() { FirstName = "Mary" });
 
-            //foreach(Student s in r.Students) {
-            //    tbOut.Text += s.FirstName;
-            //}
-
-          var studFound = r.Students.Where(stud => stud.FirstName[1] == 'z');
-            foreach(Student s in studFound) {
-                tbOut.Text += s.FirstName;
+            r.Students.Sort();
+            // List out the students
+            tbOut.Text = "";
+            foreach (Student s in r.Students) {
+                tbOut.Text += s.FirstName + "\r\n";
             }
+
+            //var studFound = r.Students.Where(stud => stud.FirstName[1] == 'z');
+            //  foreach(Student s in studFound) {
+            //      tbOut.Text += s.FirstName;
+            //  }
 
             Teacher mrSmith = new Teacher();
             Student litleJohnny = new Student();
@@ -112,10 +115,20 @@ namespace D6_Demo {
             Desk<int> calc = new Desk<int>();
            // calc.Sitter = mrSmith;
             calc.Sitter = 2645;
-            
 
 
+            StudyGroup<Teacher,Student> sg1 = new StudyGroup<Teacher,Student>();
+            StudyGroup<Student,Teacher> sg2 = new StudyGroup<Student,Teacher>();
+            StudyGroup<String,Char> sg3 = new StudyGroup<String,Char>();
+            //            sg.Leader
+            //sg.Members
+            int aa = 4;
+            sg1.Leader = new Teacher();
+            sg2.Leader = new Student();
+            sg3.Leader = "string";
 
+            List<int> ints = new List<int>();
+            List<char> chars = new List<char>();
 
         }
 
