@@ -1,7 +1,9 @@
 ﻿using BaseObjects;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace D6_Demo {
     /// <summary>
@@ -21,6 +24,7 @@ namespace D6_Demo {
     public partial class MainWindow : Window {
         BaseObjects.
             Room r = new Room();
+        Student stu;
         public MainWindow() {
             InitializeComponent();
         }
@@ -139,6 +143,48 @@ namespace D6_Demo {
             frmSecond frm = new frmSecond();
             frm.Show();
             r.SayTeacher();
+        }
+
+        private void btnSerialize_Click(object sender, RoutedEventArgs e) {
+            //stu = new Student();
+            //stu.FirstName = txtFirstName.Text;
+            //stu.LastName = "Karki";
+            //stu.StudentID = 92374325;
+            //stu.MiddleName = "Raj";
+
+            // XML -- But you cannot do this for your deliverable. 
+            //XmlSerializer xmlS = new XmlSerializer(typeof(Student));
+            //StreamWriter toFile = new StreamWriter("exampleFileHandling.xml");
+            //xmlS.Serialize(toFile, stu);
+            //toFile.Close();
+
+            //BinaryFormatter bForm = new BinaryFormatter();
+            //FileStream fStream = new FileStream("fileName.student", FileMode.OpenOrCreate);
+            //bForm.Serialize(fStream, stu);
+            //fStream.Close();
+
+            r = new Room();
+
+            BinaryFormatter bForm = new BinaryFormatter();
+            FileStream fStream = new FileStream("my.room",FileMode.OpenOrCreate);
+            bForm.Serialize(fStream, r);
+            fStream.Close();
+        }
+        private void btnRead_Click(object sender, RoutedEventArgs e) {
+
+            //FileStream fStream = new FileStream("fileName.student", FileMode.Open);
+            //BinaryFormatter bForm = new BinaryFormatter();
+            //object o = bForm.Deserialize(fStream);
+            //stu = (Student)o;
+
+            //tbSaved.Text = stu.ToString();
+
+
+            FileStream fStream = new FileStream("my.room", FileMode.Open);
+            BinaryFormatter bForm = new BinaryFormatter();
+            object o = bForm.Deserialize(fStream);
+            fStream.Close();
+
         }
     }
 }

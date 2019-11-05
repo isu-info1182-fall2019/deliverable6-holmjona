@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BaseObjects {
+    [Serializable]
     public class Student : Person, ISayTeacher, IComparable<Student> {
         private int _StudentID;
 
@@ -52,6 +53,7 @@ namespace BaseObjects {
             //    return -1; // I am smaller
             //else
             //    return 0; // we are the same
+
 
         }
     }

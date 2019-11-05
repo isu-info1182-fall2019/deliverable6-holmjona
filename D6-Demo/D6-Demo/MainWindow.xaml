@@ -7,9 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnBuildStuff" Content="Built" HorizontalAlignment="Left" Margin="169,178,0,0" VerticalAlignment="Top" Width="75" Click="btnBuildStuff_Click"/>
+        <Button x:Name="btnBuildStuff" Content="Built" HorizontalAlignment="Left" Margin="425,35,0,0" VerticalAlignment="Top" Width="75" Click="btnBuildStuff_Click"/>
         <TextBlock x:Name="tbOut" HorizontalAlignment="Left" Margin="451,109,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <Button x:Name="btnShowStuff" Content="Show" HorizontalAlignment="Left" Margin="169,269,0,0" VerticalAlignment="Top" Width="75" Click="btnShowStuff_Click"  />
+        <Button x:Name="btnShowStuff" Content="Show" HorizontalAlignment="Left" Margin="526,35,0,0" VerticalAlignment="Top" Width="75" Click="btnShowStuff_Click"  />
+        <Button x:Name="btnSerialize" Content="Serialize" HorizontalAlignment="Left" Margin="97,94,0,0" VerticalAlignment="Top" Width="75" Click="btnSerialize_Click"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="87,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="87,40,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tbSaved" HorizontalAlignment="Left" Margin="87,223,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnRead" Content="Deserialize" HorizontalAlignment="Left" Margin="97,182,0,0" VerticalAlignment="Top" Width="75" Click="btnRead_Click"/>
 
     </Grid>
 </Window>

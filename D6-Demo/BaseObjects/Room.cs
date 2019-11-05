@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BaseObjects {
+    [Serializable]
     public class Room : ISayTeacher
     {
         private int _Number;

@@ -12,6 +12,7 @@ namespace BaseObjects {
     /// Prof. Holmes
     /// Description: This is a person that can exist
     /// </summary>
+   [Serializable]
    public abstract class  Person {
         #region Private Variables / Attributes / Class-Level Variables / Fields
         private string _FirstName = "";

@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BaseObjects {
-   public class Teacher : Person {
+   [Serializable]
+    public class Teacher : Person {
         private Room _Room;
 
         public Room Room {
