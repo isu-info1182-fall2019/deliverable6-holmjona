@@ -186,5 +186,63 @@ namespace D6_Demo {
             fStream.Close();
 
         }
+
+        private void btnWorkingWithLists_Click(object sender, RoutedEventArgs e) {
+
+            Room r = new Room();
+            r.Students = new List<Student>();
+            List<Student> studs = new List<Student>();
+
+            studs.Add(new Student() { FirstName = "Boo" });
+            r.Students.Add(new Student() { FirstName = "Boo" });
+            r.Students.Add(new Student() { FirstName = "Sushan" });
+            r.Students.Add(new Student() { FirstName = "Meshari" });
+
+            int counter = 1;
+            foreach(Student stud in r.Students) {
+                // what am I going to do for each student
+                tbOut.Text += counter + ". ";
+                tbOut.Text += stud.FirstName;
+                tbOut.Text += stud.LastName;
+                tbOut.Text += stud.MiddleName;
+                counter++;
+                tbOut.Text += "\r\n";
+
+            }
+
+            for (int sndx = 0; sndx < r.Students.Count; sndx++) {
+                Student stud = r.Students[sndx];
+                tbOut.Text += (sndx + 1) + ". ";
+                tbOut.Text += stud.FirstName;
+                tbOut.Text += stud.LastName;
+                tbOut.Text += stud.MiddleName;
+                tbOut.Text += "\r\n";
+            }
+
+
+            Teacher t = new Teacher();
+            t.Room = r;
+            r.Teacher = t;
+
+
+            List<Student> lst = t.Room.Teacher.Room.Teacher.Room.Students;
+
+
+            List<int> numbs = new List<int>(){ 2, 4, 6, 8, 10, 12 };
+
+            int sum = 0;
+
+            for (int ndx = 0; ndx < numbs.Count; ndx++) {
+                sum += numbs[ndx];
+            }
+            sum = 0;
+
+            foreach (int numb in numbs) {
+                sum += numb;
+            }
+
+
+
+        }
     }
 }
