@@ -117,13 +117,13 @@ namespace D6_Demo {
             openDesk.Sitter = litleJohnny;
 
             Desk<int> calc = new Desk<int>();
-           // calc.Sitter = mrSmith;
+            // calc.Sitter = mrSmith;
             calc.Sitter = 2645;
 
 
-            StudyGroup<Teacher,Student> sg1 = new StudyGroup<Teacher,Student>();
-            StudyGroup<Student,Teacher> sg2 = new StudyGroup<Student,Teacher>();
-            StudyGroup<String,Char> sg3 = new StudyGroup<String,Char>();
+            StudyGroup<Teacher, Student> sg1 = new StudyGroup<Teacher, Student>();
+            StudyGroup<Student, Teacher> sg2 = new StudyGroup<Student, Teacher>();
+            StudyGroup<String, Char> sg3 = new StudyGroup<String, Char>();
             //            sg.Leader
             //sg.Members
             int aa = 4;
@@ -166,7 +166,7 @@ namespace D6_Demo {
             r = new Room();
 
             BinaryFormatter bForm = new BinaryFormatter();
-            FileStream fStream = new FileStream("my.room",FileMode.OpenOrCreate);
+            FileStream fStream = new FileStream("my.room", FileMode.OpenOrCreate);
             bForm.Serialize(fStream, r);
             fStream.Close();
         }
@@ -199,7 +199,7 @@ namespace D6_Demo {
             r.Students.Add(new Student() { FirstName = "Meshari" });
 
             int counter = 1;
-            foreach(Student stud in r.Students) {
+            foreach (Student stud in r.Students) {
                 // what am I going to do for each student
                 tbOut.Text += counter + ". ";
                 tbOut.Text += stud.FirstName;
@@ -228,7 +228,7 @@ namespace D6_Demo {
             List<Student> lst = t.Room.Teacher.Room.Teacher.Room.Students;
 
 
-            List<int> numbs = new List<int>(){ 2, 4, 6, 8, 10, 12 };
+            List<int> numbs = new List<int>() { 2, 4, 6, 8, 10, 12 };
 
             int sum = 0;
 
@@ -243,6 +243,39 @@ namespace D6_Demo {
 
 
 
+        }
+
+        private void btnBlowUp_Click(object sender, RoutedEventArgs e) {
+
+      //      try { 
+            double x = 200005.5;
+            double y = 2506700;
+            int k = 0;
+            double z = y / k;
+
+            //MessageBox.Show(ASCIIEncoding.ASCII.GetBytes(z.ToString())[0].ToString());
+
+            MessageBox.Show(((char)8734).ToString());
+
+           //int big = int.MaxValue;
+
+            //MessageBox.Show((big).ToString());
+           // MessageBox.Show((big + 1).ToString());
+
+            //try {
+            //    File.ReadAllLines(txtFileName.Text);
+            //} catch (ArgumentException aex) {
+            //    MessageBox.Show("I am not sure of your name. " +
+            //        "Please enter a file name.");
+            //    //MessageBox.Show("oops, I had an arguement Exception");
+            //} catch (FileNotFoundException fex) {
+            //    MessageBox.Show("I am sorry, I could not find that file." +
+            //        " Please try another one.");
+            //} catch (Exception ex) {
+            //    MessageBox.Show("hmm, I had a(n) " + ex.GetType());
+            //} finally {
+            //    MessageBox.Show("I am in the Finally");
+            //}
         }
     }
 }
