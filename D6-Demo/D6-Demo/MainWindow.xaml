@@ -18,6 +18,14 @@
         <Button x:Name="btnWorkingWithLists" Content="Show Something" HorizontalAlignment="Left" Margin="281,124,0,0" VerticalAlignment="Top" Width="106" Click="btnWorkingWithLists_Click"/>
         <Button x:Name="btnBlowUp" Content="Blow Stuff Up" HorizontalAlignment="Left" Margin="87,325,0,0" VerticalAlignment="Top" Width="123" Click="btnBlowUp_Click"/>
         <TextBox x:Name="txtFileName" HorizontalAlignment="Left" Height="23" Margin="87,302,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Rectangle Fill="#44FF0000" HorizontalAlignment="Left" Height="68" Margin="654,325,0,0" Stroke="Black" VerticalAlignment="Top" Width="75"/>
+        <Rectangle Fill="#88FF0000" HorizontalAlignment="Left" Height="67" Margin="686,342,0,0" Stroke="Black" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="btnRecursive" Content="Do Something Recursive" HorizontalAlignment="Left" Margin="526,291,0,0" VerticalAlignment="Top" Width="142" Click="btnRecursive_Click"/>
+        <TextBox x:Name="txtNumb1" HorizontalAlignment="Left" Height="23" Margin="526,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNumb2" HorizontalAlignment="Left" Height="23" Margin="526,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Num1" HorizontalAlignment="Left" Margin="482,244,0,0" VerticalAlignment="Top" Width="44" Height="24"/>
+        <Label Content="Num2" HorizontalAlignment="Left" Margin="482,267,0,0" VerticalAlignment="Top" Width="44" Height="24"/>
+        <TextBlock x:Name="tbRecursOut" HorizontalAlignment="Left" Margin="526,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="62"/>
 
     </Grid>
 </Window>

@@ -247,20 +247,28 @@ namespace D6_Demo {
 
         private void btnBlowUp_Click(object sender, RoutedEventArgs e) {
 
-      //      try { 
-            double x = 200005.5;
-            double y = 2506700;
-            int k = 0;
-            double z = y / k;
+            //      try { 
+            //double x = 200005.5;
+            //double y = 2506700;
+            //int k = 0;
+            //int p = 0;
+            //double z = y / k;
+            //try {
+            //    p = 45 / k;
+            //} catch (DivideByZeroException zex) {
+            //    p = 45;
+            //} catch (Exception ex) {
+            //    MessageBox.Show(ex.Message);
+            //}
+            //MessageBox.Show(p.ToString());
+            ////MessageBox.Show(ASCIIEncoding.ASCII.GetBytes(z.ToString())[0].ToString());
 
-            //MessageBox.Show(ASCIIEncoding.ASCII.GetBytes(z.ToString())[0].ToString());
+            //MessageBox.Show(((char)8734).ToString());
 
-            MessageBox.Show(((char)8734).ToString());
-
-           //int big = int.MaxValue;
+            //int big = int.MaxValue;
 
             //MessageBox.Show((big).ToString());
-           // MessageBox.Show((big + 1).ToString());
+            // MessageBox.Show((big + 1).ToString());
 
             //try {
             //    File.ReadAllLines(txtFileName.Text);
@@ -276,6 +284,76 @@ namespace D6_Demo {
             //} finally {
             //    MessageBox.Show("I am in the Finally");
             //}
+            try {
+                //fuzzyWuzzy(1, 2);
+                magicBeans();
+            } catch (NotImplementedException nex) {
+                MessageBox.Show("Oops, I did not do that yet.");
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+
         }
+
+        private void fuzzyWuzzy(int val1, int val2) {
+            //TODO: need to code this
+            throw new NotImplementedException();
+        }
+        private void magicBeans() {
+            throw new Exception("I am in Magic Beans");
+        }
+
+        private void btnRecursive_Click(object sender, RoutedEventArgs e) {
+            // recursive function is a function that calls itself.
+            int num1, num2;
+            try {
+                num1 = int.Parse(txtNumb1.Text);
+                num2 = int.Parse(txtNumb2.Text);
+
+                //while (num2 > 0) {
+                //    //num1 += 1000;
+                //    num1++;
+                //    num2--;
+                //}
+                int ans = addNumbers(num1, num2);
+
+                tbRecursOut.Text = string.Format("num1: {0}\r\nnum2: {1}\r\nans: {2}",
+                    num1, num2, ans);
+            } catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        //private int addNumbers(int n1, int n2) {
+        //    while (n2 > 0) {
+        //        n1++;
+        //        n2--;
+        //    }
+        //    return n1;
+        //}
+        //private int addNumbers( int n1,int n2) {
+        //    if (n2 > 0)                 {
+        //        // keep running
+        //        n1++;
+        //        n2--;
+        //     return addNumbers( n1, n2);
+        //    } else {
+        //        // stop it
+        //    }
+        //    return n1;
+        //}
+
+        private int addNumbers(int n1, int n2) {
+            if (n2 == 0) return n1;
+            // keep running
+            return addNumbers(n1++, n2--);
+
+        }
+
+        private Person GetFriend(Person p) {
+            if (p.Friend == null) return p;
+            return GetFriend(p.Friend);
+        }
+
     }
 }

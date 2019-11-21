@@ -70,6 +70,13 @@ namespace BaseObjects {
             }
         }
 
+        private Person _Friend;
+
+        public Person Friend {
+            get { return _Friend; }
+            set { _Friend = value; }
+        }
+
 
         #endregion
 
